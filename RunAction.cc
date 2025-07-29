@@ -108,6 +108,9 @@ void RunAction::BeginOfRunAction(const G4Run*)
 
 void RunAction::EndOfRunAction(const G4Run* run)
 {
+  auto analysisManager = G4AnalysisManager::Instance();
+  analysisManager->Write();
+  analysisManager->CloseFile();
   G4int nofEvents = run->GetNumberOfEvent();
   if (nofEvents == 0) return;
 

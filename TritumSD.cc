@@ -26,10 +26,10 @@ G4bool TritiumSD::ProcessHits(G4Step* step, G4TouchableHistory*) {
   G4Track* trk = step->GetTrack();
   G4int pdgID =
   step->GetTrack()->GetParticleDefinition()->GetPDGEncoding();
-  auto analysisManager = G4AnalysisManager::Instance();
+  //auto analysisManager = G4AnalysisManager::Instance();
   // analysisManager->FillNtupleDColumn(0, edep);   // column 0: Edep
-  analysisManager->FillNtupleIColumn(0, 1, pdgID);  // column 1: PDG ID
-  analysisManager->AddNtupleRow(0);
+  //analysisManager->FillNtupleIColumn(0, pdgID);  // column 1: PDG ID
+  //analysisManager->AddNtupleRow(0);
   // Se il particleName è "triton", memorizza il trackID :contentReference[oaicite:3]{index=3}
   if (trk->GetDefinition()->GetParticleName() == "triton") {
     tritIDs.insert(trk->GetTrackID());
@@ -43,7 +43,7 @@ void TritiumSD::EndOfEvent(G4HCofThisEvent*) {
   hitCollection->insert(hit);
   auto analysisManager = G4AnalysisManager::Instance();
   //for (auto tid : ) {
-    analysisManager->FillNtupleIColumn(0, static_cast<G4int>(tritIDs.size()) );
-    analysisManager->AddNtupleRow(0);
+  analysisManager->FillNtupleIColumn(0, tritIDs.size() );
+  analysisManager->AddNtupleRow(0);
   //}
 }
