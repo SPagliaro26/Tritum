@@ -1,0 +1,3 @@
+/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles/exampleB1.dir
+/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles/edit_cache.dir
+/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles/rebuild_cache.dir

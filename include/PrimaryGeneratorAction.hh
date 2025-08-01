@@ -24,37 +24,41 @@
 // ********************************************************************
 //
 //
-/// \file B1/include/DetectorConstruction.hh
-/// \brief Definition of the B1::DetectorConstruction class
+/// \file B1/include/PrimaryGeneratorAction.hh
+/// \brief Definition of the B1::PrimaryGeneratorAction class
 
-#ifndef B1DetectorConstruction_h
-#define B1DetectorConstruction_h 1
+#ifndef B1PrimaryGeneratorAction_h
+#define B1PrimaryGeneratorAction_h 1
 
-#include "G4VUserDetectorConstruction.hh"
-#include "TritumSD.hh"
+#include "G4VUserPrimaryGeneratorAction.hh"
 
-class G4VPhysicalVolume;
-class G4LogicalVolume;
+class G4GeneralParticleSource;
+class G4Event;
+class G4Box;
 
 namespace B1
 {
 
-/// Detector construction class to define materials and geometry.
+/// The primary generator action class with particle gun.
+///
+/// The default kinematic is a 6 MeV gamma, randomly distribued
+/// in front of the phantom across 80% of the (X,Y) phantom size.
 
-class DetectorConstruction : public G4VUserDetectorConstruction
+class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
 {
   public:
-  
-    DetectorConstruction();
-    virtual  ~DetectorConstruction();
+    PrimaryGeneratorAction();
+    ~PrimaryGeneratorAction() override;
 
-    virtual G4VPhysicalVolume* Construct() override;
+    // method from the base class
+    void GeneratePrimaries(G4Event*) override;
 
-    G4LogicalVolume* GetScoringVolume() const;
-    
-    virtual void ConstructSDandField() override;
+    // method to access particle gun
+    const G4GeneralParticleSource* GetGeneralParticleSource() const { return fParticleGun; }
+
   private:
-    G4LogicalVolume* fScoringVolume = nullptr;
+    G4GeneralParticleSource* fParticleGun = nullptr;  // pointer a to G4 gun class
+    G4Box* fEnvelopeBox = nullptr;
 };
 
 }  // namespace B1

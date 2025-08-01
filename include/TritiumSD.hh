@@ -2,8 +2,9 @@
 #define TRITIUMSD_H
 
 #include "G4VSensitiveDetector.hh"
-#include "TritumHit.hh"
+#include "TritiumHit.hh"
 #include <set>
+typedef G4THitsCollection<TritiumHit> TritiumHitsCollection;
 
 class TritiumSD : public G4VSensitiveDetector {
 public:
@@ -20,7 +21,7 @@ public:
   virtual void EndOfEvent(G4HCofThisEvent* hce) override;
 
 private:
-  TritiumHitsCollection* hitCollection;
+  TritiumHitsCollection* fHitsCollection;
   G4int                  collID;
   std::set<G4int>        tritIDs;  // tiene univoci i trackID dei tritoni :contentReference[oaicite:1]{index=1}
 };

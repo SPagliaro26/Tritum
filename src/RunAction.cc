@@ -51,31 +51,24 @@ RunAction::RunAction() : G4UserRunAction()
   
   // add new units for dose
   //
-  const G4double milligray = 1.e-3 * gray;
-  const G4double microgray = 1.e-6 * gray;
-  const G4double nanogray = 1.e-9 * gray;
-  const G4double picogray = 1.e-12 * gray;
-
-  new G4UnitDefinition("milligray", "milliGy", "Dose", milligray);
-  new G4UnitDefinition("microgray", "microGy", "Dose", microgray);
-  new G4UnitDefinition("nanogray", "nanoGy", "Dose", nanogray);
-  new G4UnitDefinition("picogray", "picoGy", "Dose", picogray);
 
   // Register accumulable to the accumulable manager
   G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
-  accumulableManager->Register(fEdep);
-  accumulableManager->Register(fEdep2);
-
+  accumulableManager->RegisterAccumulable(fEdep);
+  accumulableManager->RegisterAccumulable(fEdep2);
   auto analysisManager = G4AnalysisManager::Instance();
-  analysisManager->CreateNtuple("Tritum breeder", "Tritum breeder");  // nTUpla 0
-  analysisManager->CreateNtupleDColumn("PID");  
-  //analysisManager->CreateNtupleDColumn("EabsTOT");
-  //analysisManager->CreateNtupleDColumn("SourceEN");
-  //analysisManager->CreateNtupleDColumn("EventID");
+  analysisManager->SetNtupleMerging(true);
+  analysisManager->CreateNtuple("Tritium breeder", "Tritium breeder");  // nTUpla 0
+  analysisManager->CreateNtupleDColumn("PID");  // 01
+  analysisManager->CreateNtupleDColumn("EabsTOT");// 02
+  analysisManager->CreateNtupleDColumn("SourceEN");// 03
+  analysisManager->CreateNtupleDColumn("EventID");// 04
   analysisManager->FinishNtuple();
+
+
 }
 RunAction::~RunAction(){
-  
+
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
@@ -89,16 +82,15 @@ void RunAction::BeginOfRunAction(const G4Run*)
   G4RunManager::GetRunManager()->SetRandomNumberStore(false);
 
   // reset accumulables to their initial values
-  G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();
-
-  
+  G4AccumulableManager* accumulableManager = G4AccumulableManager::Instance();  
   accumulableManager->Reset();
 
    // Get analysis manager
   auto analysisManager = G4AnalysisManager::Instance();
+ 
   // Open an output file
   //
-  G4String fileName = "Tritum.root";
+  G4String fileName = "Tritium.root";
   analysisManager->OpenFile(fileName);
   G4cout << "Using " << analysisManager->GetType() << G4endl;
 
@@ -109,8 +101,7 @@ void RunAction::BeginOfRunAction(const G4Run*)
 void RunAction::EndOfRunAction(const G4Run* run)
 {
   auto analysisManager = G4AnalysisManager::Instance();
-  analysisManager->Write();
-  analysisManager->CloseFile();
+
   G4int nofEvents = run->GetNumberOfEvent();
   if (nofEvents == 0) return;
 
@@ -135,20 +126,26 @@ void RunAction::EndOfRunAction(const G4Run* run)
   G4double dose = edep / mass;
   G4double rmsDose = rms / mass;
 
-  // Run conditions
-  //  note: There is no primary generator action object for "master"
-  //        run manager for multi-threaded mode.
-  const auto generatorAction = static_cast<const PrimaryGeneratorAction*>(
-    G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction());
-  G4String runCondition;
-  if (generatorAction) {
-    const G4GeneralParticleSource* particleGun = generatorAction->GetGeneralPartcileSource();
+// Get the PrimaryGeneratorAction (may be nullptr in master thread)
+const auto generatorAction = static_cast<const PrimaryGeneratorAction*>(
+  G4RunManager::GetRunManager()->GetUserPrimaryGeneratorAction());
+
+G4String runCondition;
+
+if (generatorAction) {
+  // Get the particle source
+  const G4GeneralParticleSource* particleGun = generatorAction->GetGeneralParticleSource();
+  
+  if (particleGun) {
+    // Get particle name
     runCondition += particleGun->GetParticleDefinition()->GetParticleName();
     runCondition += " of ";
+    
+    // Get particle energy with units
     G4double particleEnergy = particleGun->GetParticleEnergy();
     runCondition += G4BestUnit(particleEnergy, "Energy");
   }
-
+}
   // Print
   //
   if (IsMaster()) {
@@ -163,7 +160,8 @@ void RunAction::EndOfRunAction(const G4Run* run)
          << " rms = " << G4BestUnit(rmsDose, "Dose") << G4endl
          << "------------------------------------------------------------" << G4endl << G4endl;
 
-       
+  analysisManager->Write();
+  analysisManager->CloseFile();
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

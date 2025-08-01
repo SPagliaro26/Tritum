@@ -24,42 +24,49 @@
 // ********************************************************************
 //
 //
-/// \file B1/src/ActionInitialization.cc
-/// \brief Implementation of the B1::ActionInitialization class
+/// \file B1/include/EventAction.hh
+/// \brief Definition of the B1::EventAction class
 
-#include "ActionInitialization.hh"
+#ifndef B1EventAction_h
+#define B1EventAction_h 1
 
-#include "EventAction.hh"
-#include "PrimaryGeneratorAction.hh"
-#include "RunAction.hh"
-#include "SteppingAction.hh"
+#include "G4UserEventAction.hh"
+#include "globals.hh"
+#include "G4Event.hh"
+#include "G4Accumulable.hh"
+#include "G4THitsCollection.hh"
+#include "G4Allocator.hh"
+#include "G4String.hh"
+#include "TritiumHit.hh"
+
+
+class G4Event;
 
 namespace B1
 {
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+class RunAction;
 
-void ActionInitialization::BuildForMaster() const
+/// Event action class
+
+class EventAction : public G4UserEventAction
 {
-  auto runAction = new RunAction;
-  SetUserAction(runAction);
-}
+  public:
+    explicit EventAction(RunAction* runAction);
+    virtual ~EventAction() override = default;
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+    void BeginOfEventAction(const G4Event* event) override;
+    virtual void EndOfEventAction(const G4Event* event) override;
 
-void ActionInitialization::Build() const
-{
-  SetUserAction(new PrimaryGeneratorAction);
-
-  auto runAction = new RunAction;
-  SetUserAction(runAction);
-
-  auto eventAction = new EventAction(runAction);
-  SetUserAction(eventAction);
-
-  SetUserAction(new SteppingAction(eventAction));
-}
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+    void AddEdep(G4double edep) { fEdep += edep; }
+    
+  private:
+    RunAction* fRunAction = nullptr;
+    G4double fEdep = 0.;
+};
 
 }  // namespace B1
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+#endif

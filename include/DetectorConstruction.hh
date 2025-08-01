@@ -24,55 +24,41 @@
 // ********************************************************************
 //
 //
-/// \file B1/src/EventAction.cc
-/// \brief Implementation of the B1::EventAction class
+/// \file B1/include/DetectorConstruction.hh
+/// \brief Definition of the B1::DetectorConstruction class
 
-#include "EventAction.hh"
-#include "G4RunManager.hh"
-#include "RunAction.hh"
-#include "TritumHit.hh"
-#include "G4SDManager.hh"
-#include "G4Event.hh"
+#ifndef B1DetectorConstruction_h
+#define B1DetectorConstruction_h 1
+
+#include "G4VUserDetectorConstruction.hh"
+#include "TritiumSD.hh"
+
+class G4VPhysicalVolume;
+class G4LogicalVolume;
 
 namespace B1
 {
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+/// Detector construction class to define materials and geometry.
 
-EventAction::EventAction(RunAction* runAction) : fRunAction(runAction) {}
-
-
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
-
-void EventAction::BeginOfEventAction(const G4Event*)
+class DetectorConstruction : public G4VUserDetectorConstruction
 {
- 
-}
+  public:
+  
+    DetectorConstruction();
+    virtual  ~DetectorConstruction();
 
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+    virtual G4VPhysicalVolume* Construct() override;
 
-void EventAction::EndOfEventAction(const G4Event* event)
-{
-  auto sdMan = G4SDManager::GetSDMpointer();
-G4int cid = sdMan->GetCollectionID("TritiumSD/TritiumColl");
-auto hce = event->GetHCofThisEvent();
-if (!hce) return;
-auto hits = static_cast<TritiumHitsCollection*>(hce->GetHC(cid));
-if (hits && hits->entries()>0) {
-  G4int count = (*hits)[0]->GetCount();
-  G4cout << "Evento " << event->GetEventID()
-         << ": trizi = " << count << G4endl;
-     //aggiunta    
-        
-
-                                                      
-}
-   
-  // accumulate statistics in run action
-  fRunAction->AddEdep(fEdep);
-}
-
-//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+    G4LogicalVolume* GetScoringVolume() const;
+    
+    virtual void ConstructSDandField() override;
+  private:
+    G4LogicalVolume* fScoringVolume = nullptr;
+};
 
 }  // namespace B1
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+#endif

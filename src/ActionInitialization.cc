@@ -24,47 +24,40 @@
 // ********************************************************************
 //
 //
-/// \file B1/src/SteppingAction.cc
-/// \brief Implementation of the B1::SteppingAction class
+/// \file B1/src/ActionInitialization.cc
+/// \brief Implementation of the B1::ActionInitialization class
 
-#include "SteppingAction.hh"
+#include "ActionInitialization.hh"
 
-#include "DetectorConstruction.hh"
 #include "EventAction.hh"
-
-#include "G4Event.hh"
-#include "G4LogicalVolume.hh"
-#include "G4RunManager.hh"
-#include "G4Step.hh"
+#include "PrimaryGeneratorAction.hh"
+#include "RunAction.hh"
+//#include "SteppingAction.hh"
 
 namespace B1
 {
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-SteppingAction::SteppingAction(EventAction* eventAction) : fEventAction(eventAction) {}
+void ActionInitialization::BuildForMaster() const
+{
+  auto runAction = new RunAction;
+  SetUserAction(runAction);
+}
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-void SteppingAction::UserSteppingAction(const G4Step* step)
+void ActionInitialization::Build() const
 {
-  
-  if (!fScoringVolume) {
-    const auto detConstruction = static_cast<const DetectorConstruction*>(
-      G4RunManager::GetRunManager()->GetUserDetectorConstruction());
-    fScoringVolume = detConstruction->GetScoringVolume();
-  }
+  SetUserAction(new PrimaryGeneratorAction);
 
-  // get volume of the current step
-  G4LogicalVolume* volume =
-    step->GetPreStepPoint()->GetTouchableHandle()->GetVolume()->GetLogicalVolume();
+  auto runAction = new RunAction;
+  SetUserAction(runAction);
 
-  // check if we are in scoring volume
-  if (volume != fScoringVolume) return;
+  auto eventAction = new EventAction(runAction);
+  SetUserAction(eventAction);
 
-  // collect energy deposited in this step
-  G4double edepStep = step->GetTotalEnergyDeposit();
-  fEventAction->AddEdep(edepStep);
+  //SetUserAction(new SteppingAction(eventAction));
 }
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......

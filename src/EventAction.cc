@@ -24,45 +24,59 @@
 // ********************************************************************
 //
 //
-/// \file B1/include/PrimaryGeneratorAction.hh
-/// \brief Definition of the B1::PrimaryGeneratorAction class
+/// \file B1/src/EventAction.cc
+/// \brief Implementation of the B1::EventAction class
 
-#ifndef B1PrimaryGeneratorAction_h
-#define B1PrimaryGeneratorAction_h 1
-
-#include "G4VUserPrimaryGeneratorAction.hh"
-
-class G4GeneralParticleSource;
-class G4Event;
-class G4Box;
+#include "EventAction.hh"
+#include "G4RunManager.hh"
+#include "RunAction.hh"
+#include "TritumHit.hh"
+#include "G4SDManager.hh"
+#include "G4Event.hh"
+#include "G4HCofThisEvent.hh"
+#include "G4AnalysisManager.hh"
 
 namespace B1
 {
-
-/// The primary generator action class with particle gun.
-///
-/// The default kinematic is a 6 MeV gamma, randomly distribued
-/// in front of the phantom across 80% of the (X,Y) phantom size.
-
-class PrimaryGeneratorAction : public G4VUserPrimaryGeneratorAction
-{
-  public:
-    PrimaryGeneratorAction();
-    ~PrimaryGeneratorAction() override;
-
-    // method from the base class
-    void GeneratePrimaries(G4Event*) override;
-
-    // method to access particle gun
-    const G4GeneralParticleSource* GetGeneralPartcileSource() const { return fParticleGun; }
-
-  private:
-    G4GeneralParticleSource* fParticleGun = nullptr;  // pointer a to G4 gun class
-    G4Box* fEnvelopeBox = nullptr;
-};
-
-}  // namespace B1
+  typedef G4THitsCollection<TritiumHit> TritiumHitsCollection;
 
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
-#endif
+EventAction::EventAction(RunAction* runAction) : fRunAction(runAction) {}
+
+
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void EventAction::BeginOfEventAction(const G4Event*)
+{
+ 
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+void EventAction::EndOfEventAction(const G4Event* event)
+{
+    auto analysisManager = G4AnalysisManager::Instance();
+    G4int eventID = event->GetEventID();
+
+    auto hce = event->GetHCofThisEvent();
+    if (!hce) return;
+
+    auto hcID = G4SDManager::GetSDMpointer()->GetCollectionID("TritiumHitsCollection");
+    auto hits = static_cast<TritiumHitsCollection*>(hce->GetHC(hcID));
+
+    for (size_t i = 0; i < hits->GetSize(); ++i) {
+        auto* hit = (*hits)[i];
+
+        analysisManager->FillNtupleDColumn(0, hit->GetPDG());
+        analysisManager->FillNtupleDColumn(1, hit->GetEdep());
+        analysisManager->FillNtupleDColumn(2, hit->GetKinEnergy());
+        analysisManager->FillNtupleDColumn(3, eventID);
+        analysisManager->AddNtupleRow();
+    }
+}
+
+//....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
+
+}  // namespace B1
