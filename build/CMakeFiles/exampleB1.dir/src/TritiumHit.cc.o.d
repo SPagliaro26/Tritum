@@ -1,9 +1,7 @@
-CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o: \
-  /home/giulio/Salvo/TritiumG4/Tritum/src/ActionInitialization.cc \
-  /home/giulio/Salvo/TritiumG4/Tritum/include/ActionInitialization.hh \
-  /usr/local/include/Geant4/G4VUserActionInitialization.hh \
-  /home/giulio/Salvo/TritiumG4/Tritum/include/EventAction.hh \
-  /usr/local/include/Geant4/G4UserEventAction.hh \
+CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o: \
+  /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumHit.cc \
+  /home/giulio/Salvo/TritiumG4/Tritum/include/TritiumHit.hh \
+  /usr/local/include/Geant4/G4VHit.hh \
   /usr/local/include/Geant4/globals.hh \
   /usr/local/include/Geant4/G4ios.hh \
   /usr/local/include/Geant4/G4Types.hh \
@@ -271,57 +269,53 @@ CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/parse_numbers.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_mutex.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unique_lock.h \
-  /usr/local/include/Geant4/G4Event.hh \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/set \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_set.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_multiset.h \
-  /usr/local/include/Geant4/evtdefs.hh \
-  /usr/local/include/Geant4/G4Allocator.hh \
-  /usr/local/include/Geant4/G4AllocatorPool.hh \
-  /usr/local/include/Geant4/G4PrimaryVertex.hh \
-  /usr/local/include/Geant4/G4PrimaryParticle.hh \
-  /usr/local/include/Geant4/G4ThreeVector.hh \
-  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.h \
-  /usr/local/include/Geant4/CLHEP/Utility/defs.h \
-  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.icc \
-  /usr/local/include/Geant4/pwdefs.hh \
-  /usr/local/include/Geant4/G4HCofThisEvent.hh \
-  /usr/local/include/Geant4/G4VHitsCollection.hh \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/vector \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_uninitialized.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_bvector.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/vector.tcc \
-  /usr/local/include/Geant4/G4DCofThisEvent.hh \
-  /usr/local/include/Geant4/G4VDigiCollection.hh \
-  /usr/local/include/Geant4/G4TrajectoryContainer.hh \
-  /usr/local/include/Geant4/G4VTrajectory.hh \
-  /usr/local/include/Geant4/G4VUserEventInformation.hh \
-  /usr/local/include/Geant4/G4Profiler.hh \
-  /usr/local/include/Geant4/G4Profiler.icc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/functional \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_function.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/unordered_map \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unordered_map.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable_policy.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/enable_special_members.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/compare \
-  /usr/local/include/Geant4/PTL/Globals.hh \
-  /usr/local/include/Geant4/PTL/Types.hh \
-  /usr/local/include/Geant4/PTL/Utility.hh \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/utility \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_relops.h \
-  /usr/local/include/Geant4/G4Accumulable.hh \
-  /usr/local/include/Geant4/G4VAccumulable.hh \
-  /usr/local/include/Geant4/G4VAccumulable.icc \
-  /usr/local/include/Geant4/G4MergeMode.hh \
-  /usr/local/include/Geant4/G4Accumulable.icc \
   /usr/local/include/Geant4/G4THitsCollection.hh \
-  /home/giulio/Salvo/TritiumG4/Tritum/include/TritiumHit.hh \
-  /usr/local/include/Geant4/G4VHit.hh \
-  /home/giulio/Salvo/TritiumG4/Tritum/include/PrimaryGeneratorAction.hh \
-  /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
-  /home/giulio/Salvo/TritiumG4/Tritum/include/RunAction.hh \
-  /usr/local/include/Geant4/G4UserRunAction.hh
+  /usr/local/include/Geant4/G4Allocator.hh \
+  /usr/local/include/Geant4/G4AllocatorPool.hh \
+  /usr/local/include/Geant4/G4VHitsCollection.hh \
+  /usr/local/include/Geant4/G4VVisManager.hh \
+  /usr/local/include/Geant4/G4Transform3D.hh \
+  /usr/local/include/Geant4/CLHEP/Geometry/Transform3D.h \
+  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.h \
+  /usr/local/include/Geant4/CLHEP/Utility/defs.h \
+  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.icc \
+  /usr/local/include/Geant4/CLHEP/Geometry/Transform3D.icc \
+  /usr/local/include/Geant4/CLHEP/Vector/Rotation.h \
+  /usr/local/include/Geant4/CLHEP/Vector/RotationInterfaces.h \
+  /usr/local/include/Geant4/CLHEP/Vector/LorentzVector.h \
+  /usr/local/include/Geant4/CLHEP/Vector/LorentzVector.icc \
+  /usr/local/include/Geant4/CLHEP/Vector/AxisAngle.h \
+  /usr/local/include/Geant4/CLHEP/Vector/AxisAngle.icc \
+  /usr/local/include/Geant4/CLHEP/Vector/RotationInterfaces.icc \
+  /usr/local/include/Geant4/CLHEP/Vector/RotationX.h \
+  /usr/local/include/Geant4/CLHEP/Vector/RotationX.icc \
+  /usr/local/include/Geant4/CLHEP/Units/PhysicalConstants.h \
+  /usr/local/include/Geant4/CLHEP/Units/SystemOfUnits.h \
+  /usr/local/include/Geant4/CLHEP/Vector/RotationY.h \
+  /usr/local/include/Geant4/CLHEP/Vector/RotationY.icc \
+  /usr/local/include/Geant4/CLHEP/Vector/RotationZ.h \
+  /usr/local/include/Geant4/CLHEP/Vector/RotationZ.icc \
+  /usr/local/include/Geant4/CLHEP/Vector/Rotation.icc \
+  /usr/local/include/Geant4/CLHEP/Geometry/Point3D.h \
+  /usr/local/include/Geant4/CLHEP/Geometry/BasicVector3D.h \
+  /usr/local/include/Geant4/CLHEP/Geometry/Vector3D.h \
+  /usr/local/include/Geant4/CLHEP/Geometry/Normal3D.h \
+  /usr/local/include/Geant4/G4ThreeVector.hh \
+  /usr/local/include/Geant4/G4RotationMatrix.hh \
+  /usr/local/include/Geant4/G4Circle.hh \
+  /usr/local/include/Geant4/G4VMarker.hh \
+  /usr/local/include/Geant4/G4Visible.hh \
+  /usr/local/include/Geant4/G4Visible.icc \
+  /usr/local/include/Geant4/G4Point3D.hh \
+  /usr/local/include/Geant4/G4Colour.hh \
+  /usr/local/include/Geant4/G4Color.hh \
+  /usr/local/include/Geant4/G4VMarker.icc \
+  /usr/local/include/Geant4/G4VisAttributes.hh \
+  /usr/local/include/Geant4/graphics_reps_defs.hh \
+  /usr/local/include/Geant4/G4VisAttributes.icc \
+  /usr/local/include/Geant4/G4SystemOfUnits.hh

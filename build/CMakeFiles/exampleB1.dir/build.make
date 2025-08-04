@@ -73,113 +73,113 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: CMakeFiles/exampleB1.dir/flags.make
 CMakeFiles/exampleB1.dir/exampleB1.cc.o: /home/giulio/Salvo/TritiumG4/Tritum/exampleB1.cc
 CMakeFiles/exampleB1.dir/exampleB1.cc.o: CMakeFiles/exampleB1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/exampleB1.dir/exampleB1.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/exampleB1.cc.o -MF CMakeFiles/exampleB1.dir/exampleB1.cc.o.d -o CMakeFiles/exampleB1.dir/exampleB1.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/exampleB1.cc
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/exampleB1.cc.o -MF CMakeFiles/exampleB1.dir/exampleB1.cc.o.d -o CMakeFiles/exampleB1.dir/exampleB1.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/exampleB1.cc
 
 CMakeFiles/exampleB1.dir/exampleB1.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exampleB1.dir/exampleB1.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/exampleB1.cc > CMakeFiles/exampleB1.dir/exampleB1.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/exampleB1.cc > CMakeFiles/exampleB1.dir/exampleB1.cc.i
 
 CMakeFiles/exampleB1.dir/exampleB1.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exampleB1.dir/exampleB1.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/exampleB1.cc -o CMakeFiles/exampleB1.dir/exampleB1.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/exampleB1.cc -o CMakeFiles/exampleB1.dir/exampleB1.cc.s
 
 CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o: CMakeFiles/exampleB1.dir/flags.make
 CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o: /home/giulio/Salvo/TritiumG4/Tritum/src/ActionInitialization.cc
 CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o: CMakeFiles/exampleB1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o -MF CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o.d -o CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/ActionInitialization.cc
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o -MF CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o.d -o CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/ActionInitialization.cc
 
 CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/ActionInitialization.cc > CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/ActionInitialization.cc > CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.i
 
 CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/ActionInitialization.cc -o CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/ActionInitialization.cc -o CMakeFiles/exampleB1.dir/src/ActionInitialization.cc.s
 
 CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o: CMakeFiles/exampleB1.dir/flags.make
 CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o: /home/giulio/Salvo/TritiumG4/Tritum/src/DetectorConstruction.cc
 CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o: CMakeFiles/exampleB1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o -MF CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o.d -o CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/DetectorConstruction.cc
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o -MF CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o.d -o CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/DetectorConstruction.cc
 
 CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/DetectorConstruction.cc > CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/DetectorConstruction.cc > CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.i
 
 CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/DetectorConstruction.cc -o CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/DetectorConstruction.cc -o CMakeFiles/exampleB1.dir/src/DetectorConstruction.cc.s
 
 CMakeFiles/exampleB1.dir/src/EventAction.cc.o: CMakeFiles/exampleB1.dir/flags.make
 CMakeFiles/exampleB1.dir/src/EventAction.cc.o: /home/giulio/Salvo/TritiumG4/Tritum/src/EventAction.cc
 CMakeFiles/exampleB1.dir/src/EventAction.cc.o: CMakeFiles/exampleB1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/exampleB1.dir/src/EventAction.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/EventAction.cc.o -MF CMakeFiles/exampleB1.dir/src/EventAction.cc.o.d -o CMakeFiles/exampleB1.dir/src/EventAction.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/EventAction.cc
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/EventAction.cc.o -MF CMakeFiles/exampleB1.dir/src/EventAction.cc.o.d -o CMakeFiles/exampleB1.dir/src/EventAction.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/EventAction.cc
 
 CMakeFiles/exampleB1.dir/src/EventAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exampleB1.dir/src/EventAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/EventAction.cc > CMakeFiles/exampleB1.dir/src/EventAction.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/EventAction.cc > CMakeFiles/exampleB1.dir/src/EventAction.cc.i
 
 CMakeFiles/exampleB1.dir/src/EventAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exampleB1.dir/src/EventAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/EventAction.cc -o CMakeFiles/exampleB1.dir/src/EventAction.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/EventAction.cc -o CMakeFiles/exampleB1.dir/src/EventAction.cc.s
 
 CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o: CMakeFiles/exampleB1.dir/flags.make
 CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o: /home/giulio/Salvo/TritiumG4/Tritum/src/PrimaryGeneratorAction.cc
 CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o: CMakeFiles/exampleB1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o -MF CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o.d -o CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/PrimaryGeneratorAction.cc
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o -MF CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o.d -o CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/PrimaryGeneratorAction.cc
 
 CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/PrimaryGeneratorAction.cc > CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/PrimaryGeneratorAction.cc > CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.i
 
 CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/PrimaryGeneratorAction.cc -o CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/PrimaryGeneratorAction.cc -o CMakeFiles/exampleB1.dir/src/PrimaryGeneratorAction.cc.s
 
 CMakeFiles/exampleB1.dir/src/RunAction.cc.o: CMakeFiles/exampleB1.dir/flags.make
 CMakeFiles/exampleB1.dir/src/RunAction.cc.o: /home/giulio/Salvo/TritiumG4/Tritum/src/RunAction.cc
 CMakeFiles/exampleB1.dir/src/RunAction.cc.o: CMakeFiles/exampleB1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/exampleB1.dir/src/RunAction.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/RunAction.cc.o -MF CMakeFiles/exampleB1.dir/src/RunAction.cc.o.d -o CMakeFiles/exampleB1.dir/src/RunAction.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/RunAction.cc
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/RunAction.cc.o -MF CMakeFiles/exampleB1.dir/src/RunAction.cc.o.d -o CMakeFiles/exampleB1.dir/src/RunAction.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/RunAction.cc
 
 CMakeFiles/exampleB1.dir/src/RunAction.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exampleB1.dir/src/RunAction.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/RunAction.cc > CMakeFiles/exampleB1.dir/src/RunAction.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/RunAction.cc > CMakeFiles/exampleB1.dir/src/RunAction.cc.i
 
 CMakeFiles/exampleB1.dir/src/RunAction.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exampleB1.dir/src/RunAction.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/RunAction.cc -o CMakeFiles/exampleB1.dir/src/RunAction.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/RunAction.cc -o CMakeFiles/exampleB1.dir/src/RunAction.cc.s
 
 CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o: CMakeFiles/exampleB1.dir/flags.make
 CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o: /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumHit.cc
 CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o: CMakeFiles/exampleB1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o -MF CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o.d -o CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumHit.cc
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o -MF CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o.d -o CMakeFiles/exampleB1.dir/src/TritiumHit.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumHit.cc
 
 CMakeFiles/exampleB1.dir/src/TritiumHit.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exampleB1.dir/src/TritiumHit.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumHit.cc > CMakeFiles/exampleB1.dir/src/TritiumHit.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumHit.cc > CMakeFiles/exampleB1.dir/src/TritiumHit.cc.i
 
 CMakeFiles/exampleB1.dir/src/TritiumHit.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exampleB1.dir/src/TritiumHit.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumHit.cc -o CMakeFiles/exampleB1.dir/src/TritiumHit.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumHit.cc -o CMakeFiles/exampleB1.dir/src/TritiumHit.cc.s
 
 CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o: CMakeFiles/exampleB1.dir/flags.make
 CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o: /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumSD.cc
 CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o: CMakeFiles/exampleB1.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/giulio/Salvo/TritiumG4/Tritum/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o -MF CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o.d -o CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumSD.cc
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o -MF CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o.d -o CMakeFiles/exampleB1.dir/src/TritiumSD.cc.o -c /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumSD.cc
 
 CMakeFiles/exampleB1.dir/src/TritiumSD.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/exampleB1.dir/src/TritiumSD.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumSD.cc > CMakeFiles/exampleB1.dir/src/TritiumSD.cc.i
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumSD.cc > CMakeFiles/exampleB1.dir/src/TritiumSD.cc.i
 
 CMakeFiles/exampleB1.dir/src/TritiumSD.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/exampleB1.dir/src/TritiumSD.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumSD.cc -o CMakeFiles/exampleB1.dir/src/TritiumSD.cc.s
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/giulio/Salvo/TritiumG4/Tritum/src/TritiumSD.cc -o CMakeFiles/exampleB1.dir/src/TritiumSD.cc.s
 
 # Object files for target exampleB1
 exampleB1_OBJECTS = \

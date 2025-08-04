@@ -1,11 +1,7 @@
-CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
-  /home/giulio/Salvo/TritiumG4/Tritum/exampleB1.cc \
-  /home/giulio/Salvo/TritiumG4/Tritum/include/ActionInitialization.hh \
-  /usr/local/include/Geant4/G4VUserActionInitialization.hh \
-  /home/giulio/Salvo/TritiumG4/Tritum/include/DetectorConstruction.hh \
-  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
-  /usr/local/include/Geant4/globals.hh \
-  /usr/local/include/Geant4/G4ios.hh \
+CMakeFiles/exampleB1.dir/src/RunAction.cc.o: \
+  /home/giulio/Salvo/TritiumG4/Tritum/src/RunAction.cc \
+  /home/giulio/Salvo/TritiumG4/Tritum/include/RunAction.hh \
+  /usr/local/include/Geant4/G4UserRunAction.hh \
   /usr/local/include/Geant4/G4Types.hh \
   /usr/local/include/Geant4/G4GlobalConfig.hh \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/complex \
@@ -218,6 +214,10 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/istream.tcc \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/sstream.tcc \
   /usr/local/include/Geant4/tls.hh \
+  /usr/local/include/Geant4/G4Accumulable.hh \
+  /usr/local/include/Geant4/G4VAccumulable.hh \
+  /usr/local/include/Geant4/globals.hh \
+  /usr/local/include/Geant4/G4ios.hh \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/iostream \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/algorithm \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_algo.h \
@@ -271,11 +271,128 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/parse_numbers.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_mutex.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unique_lock.h \
+  /usr/local/include/Geant4/G4VAccumulable.icc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/utility \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_relops.h \
+  /usr/local/include/Geant4/G4MergeMode.hh \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/functional \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_function.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/unordered_map \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unordered_map.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable_policy.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/enable_special_members.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/vector \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_uninitialized.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_vector.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_bvector.h \
   /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/vector.tcc \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/compare \
+  /usr/local/include/Geant4/G4Accumulable.icc \
+  /usr/local/include/Geant4/G4AnalysisManager.hh \
+  /usr/local/include/Geant4/G4GenericAnalysisManager.hh \
+  /usr/local/include/Geant4/G4ToolsAnalysisManager.hh \
+  /usr/local/include/Geant4/G4VAnalysisManager.hh \
+  /usr/local/include/Geant4/G4AnalysisManagerState.hh \
+  /usr/local/include/Geant4/G4AnalysisVerbose.hh \
+  /usr/local/include/Geant4/G4Threading.hh \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/chrono \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/condition_variable \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr_base.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/allocated_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unique_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/ext/concurrence.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/future \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/atomic_base.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/atomic_lockfree_defines.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/atomic_futex.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/atomic \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_thread.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/thread \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/this_thread_sleep.h \
+  /usr/local/include/Geant4/G4AnalysisUtilities.hh \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/memory \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_raw_storage_iter.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/align.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr_atomic.h \
+  /usr/lib/llvm-18/lib/clang/18/include/sanitizer/tsan_interface.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward/auto_ptr.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/glue_memory_defs.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/fstream \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++io.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/fstream.tcc \
+  /usr/local/include/Geant4/G4VTBaseHnManager.hh \
+  /usr/local/include/Geant4/G4HnInformation.hh \
+  /usr/local/include/Geant4/G4BinScheme.hh \
+  /usr/local/include/Geant4/G4Fcn.hh \
+  /usr/local/include/Geant4/G4VAnalysisManager.icc \
+  /usr/local/include/Geant4/G4HnManager.hh \
+  /usr/local/include/Geant4/G4BaseAnalysisManager.hh \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/set \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_set.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_multiset.h \
+  /usr/local/include/Geant4/G4NtupleBookingManager.hh \
+  /usr/local/include/Geant4/tools/ntuple_booking \
+  /usr/local/include/Geant4/tools/cids \
+  /usr/local/include/Geant4/tools/cid \
+  /usr/local/include/Geant4/tools/typedefs \
+  /usr/local/include/Geant4/tools/forit \
+  /usr/local/include/Geant4/G4NtupleBookingManager.icc \
+  /usr/local/include/Geant4/G4VNtupleManager.hh \
+  /usr/local/include/Geant4/G4VFileManager.hh \
+  /usr/local/include/Geant4/G4BaseFileManager.hh \
+  /usr/local/include/Geant4/G4VTHnFileManager.hh \
+  /usr/local/include/Geant4/G4TH1ToolsManager.hh \
+  /usr/local/include/Geant4/G4THnToolsManager.hh \
+  /usr/local/include/Geant4/G4THnManager.hh \
+  /usr/local/include/Geant4/G4THnManager.icc \
+  /usr/local/include/Geant4/G4AutoLock.hh \
+  /usr/local/include/Geant4/G4THnMessenger.hh \
+  /usr/local/include/Geant4/G4UImessenger.hh \
+  /usr/local/include/Geant4/G4UIdirectory.hh \
+  /usr/local/include/Geant4/G4UIcommand.hh \
+  /usr/local/include/Geant4/G4ApplicationState.hh \
+  /usr/local/include/Geant4/G4ThreeVector.hh \
+  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.h \
+  /usr/local/include/Geant4/CLHEP/Utility/defs.h \
+  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.icc \
+  /usr/local/include/Geant4/G4UIparameter.hh \
+  /usr/local/include/Geant4/G4UItokenNum.hh \
+  /usr/local/include/Geant4/G4THnToolsManager.icc \
+  /usr/local/include/Geant4/G4THnMessenger.icc \
+  /usr/local/include/Geant4/G4Tokenizer.hh \
+  /usr/local/include/Geant4/G4TH2ToolsManager.hh \
+  /usr/local/include/Geant4/G4TH3ToolsManager.hh \
+  /usr/local/include/Geant4/G4TP1ToolsManager.hh \
+  /usr/local/include/Geant4/G4TP2ToolsManager.hh \
+  /usr/local/include/Geant4/tools/histo/h1d \
+  /usr/local/include/Geant4/tools/histo/h1 \
+  /usr/local/include/Geant4/tools/histo/b1 \
+  /usr/local/include/Geant4/tools/histo/base_histo \
+  /usr/local/include/Geant4/tools/histo/histo_data \
+  /usr/local/include/Geant4/tools/histo/axes \
+  /usr/local/include/Geant4/tools/histo/axis \
+  /usr/local/include/Geant4/tools/histo/../eqT \
+  /usr/local/include/Geant4/tools/histo/h2d \
+  /usr/local/include/Geant4/tools/histo/h2 \
+  /usr/local/include/Geant4/tools/histo/b2 \
+  /usr/local/include/Geant4/tools/histo/h3d \
+  /usr/local/include/Geant4/tools/histo/h3 \
+  /usr/local/include/Geant4/tools/histo/b3 \
+  /usr/local/include/Geant4/tools/histo/p1d \
+  /usr/local/include/Geant4/tools/histo/p1 \
+  /usr/local/include/Geant4/tools/histo/profile_data \
+  /usr/local/include/Geant4/tools/histo/p2d \
+  /usr/local/include/Geant4/tools/histo/p2 \
+  /usr/local/include/Geant4/G4ToolsAnalysisManager.icc \
+  /usr/local/include/Geant4/G4GenericAnalysisManager.icc \
+  /usr/local/include/Geant4/G4GenericFileManager.hh \
+  /usr/local/include/Geant4/G4GenericFileManager.icc \
+  /home/giulio/Salvo/TritiumG4/Tritum/include/DetectorConstruction.hh \
+  /usr/local/include/Geant4/G4VUserDetectorConstruction.hh \
   /home/giulio/Salvo/TritiumG4/Tritum/include/TritiumSD.hh \
   /usr/local/include/Geant4/G4VSensitiveDetector.hh \
   /usr/local/include/Geant4/G4CollectionNameVector.hh \
@@ -284,10 +401,6 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/G4AllocatorPool.hh \
   /usr/local/include/Geant4/G4VHitsCollection.hh \
   /usr/local/include/Geant4/G4Step.hh \
-  /usr/local/include/Geant4/G4ThreeVector.hh \
-  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.h \
-  /usr/local/include/Geant4/CLHEP/Utility/defs.h \
-  /usr/local/include/Geant4/CLHEP/Vector/ThreeVector.icc \
   /usr/local/include/Geant4/G4VPhysicalVolume.hh \
   /usr/local/include/Geant4/geomdefs.hh \
   /usr/local/include/Geant4/G4RotationMatrix.hh \
@@ -309,24 +422,6 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/CLHEP/Vector/Rotation.icc \
   /usr/local/include/Geant4/G4GeomSplitter.hh \
   /usr/local/include/Geant4/geomwdefs.hh \
-  /usr/local/include/Geant4/G4AutoLock.hh \
-  /usr/local/include/Geant4/G4Threading.hh \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/chrono \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/condition_variable \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr_base.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/allocated_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unique_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/ext/concurrence.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/future \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/atomic_base.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/atomic_lockfree_defines.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/atomic_futex.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/atomic \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_function.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/std_thread.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/thread \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/this_thread_sleep.h \
   /usr/local/include/Geant4/G4VPhysicalVolume.icc \
   /usr/local/include/Geant4/G4StepPoint.hh \
   /usr/local/include/Geant4/G4SteppingControl.hh \
@@ -351,13 +446,6 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/G4NavigationHistoryPool.hh \
   /usr/local/include/Geant4/G4NavigationHistory.icc \
   /usr/local/include/Geant4/G4LogicalVolume.hh \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/memory \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_raw_storage_iter.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/align.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/shared_ptr_atomic.h \
-  /usr/lib/llvm-18/lib/clang/18/include/sanitizer/tsan_interface.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/backward/auto_ptr.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/pstl/glue_memory_defs.h \
   /usr/local/include/Geant4/G4Region.hh \
   /usr/local/include/Geant4/G4Region.icc \
   /usr/local/include/Geant4/G4LogicalVolume.icc \
@@ -377,10 +465,6 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/G4MaterialPropertyVector.hh \
   /usr/local/include/Geant4/G4PhysicsFreeVector.hh \
   /usr/local/include/Geant4/G4PhysicsVector.hh \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/fstream \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/c++io.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/fstream.tcc \
   /usr/local/include/Geant4/G4Log.hh \
   /usr/local/include/Geant4/G4PhysicsVectorType.hh \
   /usr/local/include/Geant4/G4PhysicsVector.icc \
@@ -393,22 +477,9 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/G4TrackVector.hh \
   /usr/local/include/Geant4/G4Profiler.hh \
   /usr/local/include/Geant4/G4Profiler.icc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/functional \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/unordered_map \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/unordered_map.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/hashtable_policy.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/enable_special_members.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/array \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/compare \
   /usr/local/include/Geant4/PTL/Globals.hh \
   /usr/local/include/Geant4/PTL/Types.hh \
   /usr/local/include/Geant4/PTL/Utility.hh \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/set \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_set.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_multiset.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/utility \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_relops.h \
   /usr/local/include/Geant4/G4Step.icc \
   /usr/local/include/Geant4/G4Track.hh \
   /usr/local/include/Geant4/trkdefs.hh \
@@ -432,91 +503,9 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/G4VSDFilter.hh \
   /home/giulio/Salvo/TritiumG4/Tritum/include/TritiumHit.hh \
   /usr/local/include/Geant4/G4THitsCollection.hh \
-  /usr/local/include/Geant4/QBBC.hh \
-  /usr/local/include/Geant4/G4VModularPhysicsList.hh \
-  /usr/local/include/Geant4/G4VPhysicsConstructor.hh \
-  /usr/local/include/Geant4/G4ParticleTable.hh \
-  /usr/local/include/Geant4/G4ParticleTableIterator.hh \
-  /usr/local/include/Geant4/G4ParticleTable.icc \
-  /usr/local/include/Geant4/G4PhysicsListHelper.hh \
-  /usr/local/include/Geant4/G4PhysicsListOrderingParameter.hh \
-  /usr/local/include/Geant4/G4ThreadLocalSingleton.hh \
-  /usr/local/include/Geant4/G4Cache.hh \
-  /usr/local/include/Geant4/G4CacheDetails.hh \
-  /usr/local/include/Geant4/G4Backtrace.hh \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/cxxabi.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/x86_64-linux-gnu/c++/13/bits/cxxabi_tweaks.h \
-  /usr/include/execinfo.h /usr/include/unistd.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
-  /usr/include/linux/close_range.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/cfenv \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/fenv.h \
-  /usr/include/fenv.h /usr/include/x86_64-linux-gnu/bits/fenv.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/csignal \
-  /usr/include/signal.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
-  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/siginfo_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigval_t.h \
-  /usr/include/x86_64-linux-gnu/bits/types/sigevent_t.h \
-  /usr/include/x86_64-linux-gnu/bits/sigevent-consts.h \
-  /usr/include/x86_64-linux-gnu/bits/sigaction.h \
-  /usr/include/x86_64-linux-gnu/bits/sigcontext.h \
-  /usr/include/x86_64-linux-gnu/bits/types/stack_t.h \
-  /usr/include/x86_64-linux-gnu/sys/ucontext.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigstksz.h \
-  /usr/include/x86_64-linux-gnu/bits/ss_flags.h \
-  /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h \
-  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
-  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/regex \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bitset \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/stack \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/deque \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_deque.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/deque.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_stack.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_constants.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_error.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_automaton.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_automaton.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_scanner.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_scanner.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_compiler.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_compiler.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_executor.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/regex_executor.tcc \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/list \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_list.h \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/list.tcc \
-  /usr/local/include/Geant4/G4VUPLSplitter.hh \
-  /usr/local/include/Geant4/rundefs.hh \
-  /usr/local/include/Geant4/G4VUserPhysicsList.hh \
-  /usr/local/include/Geant4/G4ProductionCutsTable.hh \
-  /usr/local/include/Geant4/G4MaterialCutsCouple.hh \
-  /usr/local/include/Geant4/G4ProductionCuts.hh \
-  /usr/local/include/Geant4/G4MCCIndexConversionTable.hh \
-  /usr/local/include/Geant4/FTFP_BERT_HP.hh \
-  /usr/local/include/Geant4/G4RunManagerFactory.hh \
-  /usr/local/include/Geant4/G4MTRunManager.hh \
-  /usr/local/include/Geant4/G4MTBarrier.hh \
-  /usr/local/include/Geant4/G4RNGHelper.hh \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/queue \
-  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_queue.h \
-  /usr/local/include/Geant4/G4RunManager.hh \
+  /home/giulio/Salvo/TritiumG4/Tritum/include/PrimaryGeneratorAction.hh \
+  /usr/local/include/Geant4/G4VUserPrimaryGeneratorAction.hh \
+  /usr/local/include/Geant4/G4GeneralParticleSource.hh \
   /usr/local/include/Geant4/G4Event.hh \
   /usr/local/include/Geant4/evtdefs.hh \
   /usr/local/include/Geant4/G4PrimaryVertex.hh \
@@ -526,18 +515,9 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/G4TrajectoryContainer.hh \
   /usr/local/include/Geant4/G4VTrajectory.hh \
   /usr/local/include/Geant4/G4VUserEventInformation.hh \
-  /usr/local/include/Geant4/G4EventManager.hh \
-  /usr/local/include/Geant4/G4StackManager.hh \
-  /usr/local/include/Geant4/G4UserStackingAction.hh \
-  /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh \
-  /usr/local/include/Geant4/G4StackedTrack.hh \
-  /usr/local/include/Geant4/G4TrackStack.hh \
-  /usr/local/include/Geant4/G4SmartTrackStack.hh \
-  /usr/local/include/Geant4/G4SubEventTrackStack.hh \
-  /usr/local/include/Geant4/G4SubEvent.hh \
-  /usr/local/include/Geant4/G4PrimaryTransformer.hh \
-  /usr/local/include/Geant4/G4TrackingManager.hh \
-  /usr/local/include/Geant4/G4SteppingManager.hh \
+  /usr/local/include/Geant4/G4SingleParticleSource.hh \
+  /usr/local/include/Geant4/G4VPrimaryGenerator.hh \
+  /usr/local/include/Geant4/G4SPSPosDistribution.hh \
   /usr/local/include/Geant4/G4Navigator.hh \
   /usr/local/include/Geant4/G4NormalNavigation.hh \
   /usr/local/include/Geant4/G4VNavigation.hh \
@@ -566,6 +546,34 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/G4RegularNavigation.hh \
   /usr/local/include/Geant4/G4VExternalNavigation.hh \
   /usr/local/include/Geant4/G4Navigator.icc \
+  /usr/local/include/Geant4/G4SPSRandomGenerator.hh \
+  /usr/local/include/Geant4/G4DataInterpolation.hh \
+  /usr/local/include/Geant4/G4Cache.hh \
+  /usr/local/include/Geant4/G4CacheDetails.hh \
+  /usr/local/include/Geant4/G4SPSAngDistribution.hh \
+  /usr/local/include/Geant4/G4SPSEneDistribution.hh \
+  /usr/local/include/Geant4/G4GeneralParticleSourceMessenger.hh \
+  /usr/local/include/Geant4/G4GeneralParticleSourceData.hh \
+  /usr/local/include/Geant4/G4AccumulableManager.hh \
+  /usr/local/include/Geant4/G4AccumulableManager.icc \
+  /usr/local/include/Geant4/G4ParticleGun.hh \
+  /usr/local/include/Geant4/G4Run.hh \
+  /usr/local/include/Geant4/G4RunManager.hh \
+  /usr/local/include/Geant4/G4EventManager.hh \
+  /usr/local/include/Geant4/G4StackManager.hh \
+  /usr/local/include/Geant4/G4UserStackingAction.hh \
+  /usr/local/include/Geant4/G4ClassificationOfNewTrack.hh \
+  /usr/local/include/Geant4/G4StackedTrack.hh \
+  /usr/local/include/Geant4/G4TrackStack.hh \
+  /usr/local/include/Geant4/G4SmartTrackStack.hh \
+  /usr/local/include/Geant4/G4SubEventTrackStack.hh \
+  /usr/local/include/Geant4/G4SubEvent.hh \
+  /usr/local/include/Geant4/G4PrimaryTransformer.hh \
+  /usr/local/include/Geant4/G4ParticleTable.hh \
+  /usr/local/include/Geant4/G4ParticleTableIterator.hh \
+  /usr/local/include/Geant4/G4ParticleTable.icc \
+  /usr/local/include/Geant4/G4TrackingManager.hh \
+  /usr/local/include/Geant4/G4SteppingManager.hh \
   /usr/local/include/Geant4/G4NoProcess.hh \
   /usr/local/include/Geant4/G4VProcess.hh \
   /usr/local/include/Geant4/Randomize.hh \
@@ -632,173 +640,12 @@ CMakeFiles/exampleB1.dir/exampleB1.cc.o: \
   /usr/local/include/Geant4/G4VSteppingVerbose.hh \
   /usr/local/include/Geant4/trkgdefs.hh \
   /usr/local/include/Geant4/G4TrackingMessenger.hh \
-  /usr/local/include/Geant4/G4UImessenger.hh \
-  /usr/local/include/Geant4/G4UIdirectory.hh \
-  /usr/local/include/Geant4/G4UIcommand.hh \
-  /usr/local/include/Geant4/G4ApplicationState.hh \
-  /usr/local/include/Geant4/G4UIparameter.hh \
-  /usr/local/include/Geant4/G4UItokenNum.hh \
   /usr/local/include/Geant4/G4UserTrackingAction.hh \
   /usr/local/include/Geant4/G4RunManagerKernel.hh \
-  /usr/local/include/Geant4/G4TaskRunManager.hh \
-  /usr/local/include/Geant4/G4TBBTaskGroup.hh \
-  /usr/local/include/Geant4/PTL/TaskGroup.hh \
-  /usr/local/include/Geant4/PTL/AutoLock.hh \
-  /usr/local/include/Geant4/PTL/Threading.hh \
-  /usr/local/include/Geant4/PTL/Config.hh \
-  /usr/local/include/Geant4/PTL/JoinFunction.hh \
-  /usr/local/include/Geant4/PTL/Task.hh \
-  /usr/local/include/Geant4/PTL/VTask.hh \
-  /usr/local/include/Geant4/PTL/ThreadData.hh \
-  /usr/local/include/Geant4/PTL/ThreadPool.hh \
-  /usr/local/include/Geant4/PTL/VUserTaskQueue.hh \
-  /usr/local/include/Geant4/G4TaskGroup.hh \
-  /usr/local/include/Geant4/G4TaskManager.hh \
-  /usr/local/include/Geant4/PTL/TaskManager.hh \
-  /usr/local/include/Geant4/PTL/TaskRunManager.hh \
-  /usr/local/include/Geant4/G4ThreadPool.hh \
-  /usr/local/include/Geant4/G4VUserTaskQueue.hh \
-  /usr/local/include/Geant4/G4SteppingVerbose.hh \
-  /usr/local/include/Geant4/G4UIExecutive.hh \
-  /usr/local/include/Geant4/G4VUIshell.hh \
-  /usr/local/include/Geant4/G4UImanager.hh \
-  /usr/local/include/Geant4/G4UIcommandStatus.hh \
-  /usr/local/include/Geant4/G4VStateDependent.hh \
-  /usr/local/include/Geant4/icomsdefs.hh \
-  /usr/local/include/Geant4/G4VisExecutive.hh \
-  /usr/local/include/Geant4/G4VisManager.hh \
-  /usr/local/include/Geant4/G4VVisManager.hh \
-  /usr/local/include/Geant4/G4GraphicsSystemList.hh \
-  /usr/local/include/Geant4/G4VGraphicsSystem.hh \
-  /usr/local/include/Geant4/G4ModelingParameters.hh \
-  /usr/local/include/Geant4/G4VisExtent.hh \
-  /usr/local/include/Geant4/G4Point3D.hh \
-  /usr/local/include/Geant4/G4VisAttributes.hh \
-  /usr/local/include/Geant4/graphics_reps_defs.hh \
-  /usr/local/include/Geant4/G4Colour.hh \
-  /usr/local/include/Geant4/G4Color.hh \
-  /usr/local/include/Geant4/G4VisAttributes.icc \
-  /usr/local/include/Geant4/G4ModelingParameters.icc \
-  /usr/local/include/Geant4/G4NullModel.hh \
-  /usr/local/include/Geant4/G4VModel.hh \
-  /usr/local/include/Geant4/G4VModel.icc \
-  /usr/local/include/Geant4/G4SceneHandlerList.hh \
-  /usr/local/include/Geant4/G4VSceneHandler.hh \
-  /usr/local/include/Geant4/G4VGraphicsScene.hh \
-  /usr/local/include/Geant4/G4ViewerList.hh \
-  /usr/local/include/Geant4/G4VViewer.hh \
-  /usr/local/include/Geant4/G4SceneTreeItem.hh \
-  /usr/local/include/Geant4/G4AttDef.hh \
-  /usr/local/include/Geant4/G4TypeKey.hh \
-  /usr/local/include/Geant4/G4AttValue.hh \
-  /usr/local/include/Geant4/G4ViewParameters.hh \
-  /usr/local/include/Geant4/G4Vector3D.hh \
-  /usr/local/include/Geant4/G4Plane3D.hh \
-  /usr/local/include/Geant4/CLHEP/Geometry/Plane3D.h \
-  /usr/local/include/Geant4/G4VMarker.hh \
-  /usr/local/include/Geant4/G4Visible.hh \
-  /usr/local/include/Geant4/G4Visible.icc \
-  /usr/local/include/Geant4/G4VMarker.icc \
-  /usr/local/include/Geant4/G4ViewParameters.icc \
-  /usr/local/include/Geant4/G4PhysicalVolumeModel.hh \
-  /usr/local/include/Geant4/G4PseudoScene.hh \
-  /usr/local/include/Geant4/G4Box.hh \
-  /usr/local/include/Geant4/G4GeomTypes.hh \
-  /usr/local/include/Geant4/G4GeomConfig.hh \
-  /usr/local/include/Geant4/G4CSGSolid.hh \
-  /usr/local/include/Geant4/G4Polyhedron.hh \
-  /usr/local/include/Geant4/HepPolyhedron.h \
-  /usr/local/include/Geant4/G4TwoVector.hh \
-  /usr/local/include/Geant4/CLHEP/Vector/TwoVector.h \
-  /usr/local/include/Geant4/CLHEP/Vector/TwoVector.icc \
-  /usr/local/include/Geant4/G4Normal3D.hh \
-  /usr/local/include/Geant4/G4Box.icc \
-  /usr/local/include/Geant4/G4Cons.hh \
-  /usr/local/include/Geant4/G4Cons.icc \
-  /usr/local/include/Geant4/G4Orb.hh /usr/local/include/Geant4/G4Orb.icc \
-  /usr/local/include/Geant4/G4Para.hh \
-  /usr/local/include/Geant4/G4Para.icc \
-  /usr/local/include/Geant4/G4Sphere.hh \
-  /usr/local/include/Geant4/G4Sphere.icc \
-  /usr/local/include/Geant4/G4Torus.hh \
-  /usr/local/include/Geant4/G4Torus.icc \
-  /usr/local/include/Geant4/G4Trap.hh \
-  /usr/local/include/Geant4/G4Trap.icc \
-  /usr/local/include/Geant4/G4Trd.hh /usr/local/include/Geant4/G4Trd.icc \
-  /usr/local/include/Geant4/G4Tubs.hh \
-  /usr/local/include/Geant4/G4Tubs.icc \
-  /usr/local/include/Geant4/G4Ellipsoid.hh \
-  /usr/local/include/Geant4/G4Ellipsoid.icc \
-  /usr/local/include/Geant4/G4Polycone.hh \
-  /usr/local/include/Geant4/G4VCSGfaceted.hh \
-  /usr/local/include/Geant4/G4PolyconeSide.hh \
-  /usr/local/include/Geant4/G4VCSGface.hh \
-  /usr/local/include/Geant4/G4PolyconeHistorical.hh \
-  /usr/local/include/Geant4/G4Polycone.icc \
-  /usr/local/include/Geant4/G4Polyhedra.hh \
-  /usr/local/include/Geant4/G4PolyhedraSide.hh \
-  /usr/local/include/Geant4/G4PolyhedraHistorical.hh \
-  /usr/local/include/Geant4/G4Polyhedra.icc \
-  /usr/local/include/Geant4/G4TessellatedSolid.hh \
-  /usr/local/include/Geant4/G4Voxelizer.hh \
-  /usr/local/include/Geant4/G4SurfBits.hh \
-  /usr/local/include/Geant4/G4VFacet.hh \
-  /usr/local/include/Geant4/windefs.hh \
-  /usr/local/include/Geant4/G4Voxelizer.icc \
-  /usr/local/include/Geant4/G4VViewer.icc \
-  /usr/local/include/Geant4/G4THitsMap.hh \
-  /usr/local/include/Geant4/G4VSceneHandler.icc \
-  /usr/local/include/Geant4/G4SceneList.hh \
-  /usr/local/include/Geant4/G4Scene.hh \
-  /usr/local/include/Geant4/G4Scene.icc \
-  /usr/local/include/Geant4/G4TrajectoriesModel.hh \
-  /usr/local/include/Geant4/G4VisManager.icc \
-  /usr/local/include/Geant4/G4VisExecutive.icc \
-  /usr/local/include/Geant4/G4HitFilterFactories.hh \
-  /usr/local/include/Geant4/G4VFilter.hh \
-  /usr/local/include/Geant4/G4VModelFactory.hh \
-  /usr/local/include/Geant4/G4DigiFilterFactories.hh \
-  /usr/local/include/Geant4/G4VDigi.hh \
-  /usr/local/include/Geant4/G4TrajectoryFilterFactories.hh \
-  /usr/local/include/Geant4/G4TrajectoryModelFactories.hh \
-  /usr/local/include/Geant4/G4VTrajectoryModel.hh \
-  /usr/local/include/Geant4/G4ASCIITree.hh \
-  /usr/local/include/Geant4/G4VTree.hh \
-  /usr/local/include/Geant4/G4DAWNFILE.hh \
-  /usr/local/include/Geant4/G4HepRepFile.hh \
-  /usr/local/include/Geant4/G4HepRepFileXMLWriter.hh \
-  /usr/local/include/Geant4/G4RayTracer.hh \
-  /usr/local/include/Geant4/G4VRML2File.hh \
-  /usr/local/include/Geant4/G4GMocrenFile.hh \
-  /usr/local/include/Geant4/G4ToolsSGOffscreen.hh \
-  /usr/local/include/Geant4/G4OpenGLImmediateX.hh \
-  /usr/local/include/Geant4/G4OpenGLStoredX.hh \
-  /usr/local/include/Geant4/G4OpenGLImmediateQt.hh \
-  /usr/local/include/Geant4/G4OpenGLQt.hh \
-  /usr/local/include/Geant4/G4OpenGLStoredQt.hh \
-  /usr/local/include/Geant4/G4RayTracerX.hh \
-  /usr/local/include/Geant4/G4Qt3D.hh \
-  /usr/local/include/Geant4/G4ToolsSGX11GLES.hh \
-  /usr/local/include/Geant4/G4ToolsSGQtGLES.hh \
-  /usr/local/include/Geant4/G4ToolsSGQtZB.hh \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QtGlobal \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobal.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qprocessordetection.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcompilerdetection.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtypeinfo.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qflags.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic_cxx11.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qgenericatomic.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qglobalstatic.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnumeric.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h \
-  /usr/local/include/Geant4/G4UIsession.hh \
-  /usr/local/include/Geant4/G4coutDestination.hh \
-  /usr/local/include/Geant4/G4UIbatch.hh
+  /usr/local/include/Geant4/rundefs.hh \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/list \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/stl_list.h \
+  /usr/bin/../lib/gcc/x86_64-linux-gnu/13/../../../../include/c++/13/bits/list.tcc \
+  /usr/local/include/Geant4/G4SystemOfUnits.hh \
+  /usr/local/include/Geant4/G4UnitsTable.hh \
+  /usr/local/include/Geant4/G4UnitsTable.icc
