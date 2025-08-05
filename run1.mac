@@ -4,7 +4,7 @@
 # or interactively: Idle> /control/execute run1.mac
 #
 # Change the default number of workers (in multi-threading mode) 
-/run/numberOfThreads 4
+#/run/numberOfThreads 1
 #
 # Initialize kernel
 /run/initialize
@@ -13,12 +13,12 @@
 
 /gps/particle neutron
 /gps/direction 0 0 1
+/gps/pos/centre 0.0 0.0 -110.0 cm
+#/gps/pos/type Surface
+/gps/pos/type Beam
+/gps/pos/shape Circle
+/gps/pos/radius 1 mm
 /gps/ene/type Gauss
 /gps/ene/mono 14.1 MeV
 /gps/ene/sigma 0.5 MeV
-/gps/pos/type Surface
-/gps/pos/shape Circle
-/gps/pos/radius 1 mm
-#/tracking/verbose 2
-#
-/run/beamOn 100
+#/run/beamOn 100

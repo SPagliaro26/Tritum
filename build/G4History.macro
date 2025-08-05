@@ -60,3 +60,17 @@
 /vis/viewer/set/autoRefresh true
 /vis/viewer/refresh
 /vis/verbose warnings
+/control/execute run1.mac
+/run/initialize
+/gps/particle neutron
+/gps/direction 0 0 1
+/gps/pos/centre 0.0 0.0 -110.0 cm
+/gps/pos/type Beam
+/gps/pos/shape Circle
+/gps/pos/radius 1 mm
+/gps/ene/type Gauss
+/gps/ene/mono 14.1 MeV
+/gps/ene/sigma 0.5 MeV
+/run/beamOn 100
+/analysis/h1/getVector
+/analysis/h2/getVector

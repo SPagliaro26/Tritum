@@ -1,4 +1,4 @@
-#include "TritumSD.hh"
+#include "TritiumSD.hh"
 #include "G4HCofThisEvent.hh"
 #include "G4SDManager.hh"
 #include "G4Step.hh"
@@ -17,7 +17,8 @@ TritiumSD::TritiumSD(const G4String& name)
 void TritiumSD::Initialize(G4HCofThisEvent* hce) {
   fHitsCollection = new TritiumHitsCollection(SensitiveDetectorName, collectionName[0]);
   if (collID < 0) {
-    collID = G4SDManager::GetSDMpointer()->GetCollectionID(fHitsCollection->GetName());
+   // collID = G4SDManager::GetSDMpointer()->GetCollectionID(fHitsCollection->GetName());
+    collID = G4SDManager::GetSDMpointer()->GetCollectionID(SensitiveDetectorName + "/" + collectionName[0]);
   }
   hce->AddHitsCollection(collID, fHitsCollection);
   tritIDs.clear();
@@ -39,8 +40,8 @@ G4bool TritiumSD::ProcessHits(G4Step* step, G4TouchableHistory*)
         hit->SetPDG(sec->GetParticleDefinition()->GetPDGEncoding());
         hit->SetKinEnergy(sec->GetKineticEnergy());
         hit->SetEventID(eventID);
-
         fHitsCollection->insert(hit);
+        
     }
 
     return true;

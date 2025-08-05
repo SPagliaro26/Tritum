@@ -11,8 +11,8 @@ public:
     TritiumHit();
     virtual ~TritiumHit();
 
-    inline void* operator new(size_t);
-    inline void  operator delete(void*);
+    void* operator new(size_t);
+    void  operator delete(void*);
 
     void SetTrackID(G4int id)           { fTrackID = id; }
     void SetEventID(G4int id)           { fEventID = id; }
@@ -25,6 +25,7 @@ public:
     G4int GetPDG()          const { return fPDG; }
     G4double GetKinEnergy() const { return fKinEnergy; }
     G4double GetEdep()      const { return fEdep; }
+    static G4ThreadLocal G4Allocator<TritiumHit>* TritiumHitAllocator;
 
 private:
     G4int fTrackID = -1;

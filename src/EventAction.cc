@@ -30,7 +30,7 @@
 #include "EventAction.hh"
 #include "G4RunManager.hh"
 #include "RunAction.hh"
-#include "TritumHit.hh"
+#include "TritiumHit.hh"
 #include "G4SDManager.hh"
 #include "G4Event.hh"
 #include "G4HCofThisEvent.hh"
@@ -63,8 +63,16 @@ void EventAction::EndOfEventAction(const G4Event* event)
     auto hce = event->GetHCofThisEvent();
     if (!hce) return;
 
-    auto hcID = G4SDManager::GetSDMpointer()->GetCollectionID("TritiumHitsCollection");
+    static G4int hcID = -1;
+    if (hcID < 0) {
+        hcID = G4SDManager::GetSDMpointer()->GetCollectionID("TritiumSD/TritiumColl");
+    }
+
     auto hits = static_cast<TritiumHitsCollection*>(hce->GetHC(hcID));
+    if (!hits) {
+        G4cerr << "Error: TritiumHitsCollection not found!" << G4endl;
+        return;
+    }
 
     for (size_t i = 0; i < hits->GetSize(); ++i) {
         auto* hit = (*hits)[i];

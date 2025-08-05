@@ -108,14 +108,14 @@ G4VPhysicalVolume* DetectorConstruction::Construct()
                                       env_mat,  // its material
                                       "Envelope");  // its name
 
-  new G4PVPlacement(nullptr,  // no rotation
+  /*new G4PVPlacement(nullptr,  // no rotation
                     G4ThreeVector(),  // at (0,0,0)
                     logicEnv,  // its logical volume
                     "Envelope",  // its name
                     logicWorld,  // its mother  volume
                     false,  // no boolean operation
                     0,  // copy number
-                    checkOverlaps);  // overlaps checking
+                    checkOverlaps);  // overlaps checking*/
 
   //
 
@@ -155,16 +155,23 @@ G4Material* FLiBe = new G4Material(name="FLiBe  ",density,ncomponents=3);
 FLiBe->AddElement(Li, fractionmass=18*perCent);
 FLiBe->AddElement(elBe, fractionmass=10*perCent);
 FLiBe->AddElement(elF, fractionmass=72*perCent);
-  G4ThreeVector pos2 = G4ThreeVector(0, -1 * cm, 7 * cm);
+G4ThreeVector pos2 = G4ThreeVector(0, -1 * cm, 7 * cm);
 
   // Trapezoid shape
-  G4double shape1_dxa = 12 * cm, shape1_dxb = 12 * cm;
-  G4double shape1_dya = 10 * cm, shape1_dyb = 10 * cm;
-  G4double shape1_dz = 5 * cm;
-  auto solidShape1 =
-    new G4Trd("Shape1",  // its name
-              0.2 * shape1_dxa, 0.2 * shape1_dxb, 0.9 * shape1_dya, 0.9 * shape1_dyb,
-              0.5 * shape1_dz);  // its size
+  G4double shape1_dxa = 1*m ;//12 * cm, shape1_dxb = 12 * cm;
+  G4double shape1_dya = 1*m ;//10 * cm, shape1_dyb = 10 * cm;
+  G4double shape1_dz = 1*m ;//5 * cm;
+  auto solidShape1 = new G4Box(  // its name
+            "Shape1",  // its name
+            0.5 * shape1_dxa, 0.5 * shape1_dya, 0.5 * shape1_dz);  // its size
+            
+  // Note: G4Box is a special case of G4Trd, so we
+  // could also use G4Trd here, but G4Box is more intuitive for
+  // rectangular shapes. If you want to use G4Trd, you can do so
+  // like this:
+   // new G4Trd("Shape1",  // its name
+   //           0.2 * shape1_dxa, 0.2 * shape1_dxb, 0.9 * shape1_dya, 0.9 * shape1_dyb,
+   //           0.5 * shape1_dz);  // its size
 
   auto logicShape1 = new G4LogicalVolume(solidShape1,  // its solid
                                           FLiBe,  // its material
@@ -174,7 +181,7 @@ FLiBe->AddElement(elF, fractionmass=72*perCent);
                     pos2,  // at position
                     logicShape1,  // its logical volume
                     "Shape1",  // its name
-                    logicEnv,  // its mother  volume
+                    logicWorld,  // its mother  volume
                     false,  // no boolean operation
                     0,  // copy number
                     checkOverlaps);  // overlaps checking
@@ -189,15 +196,19 @@ FLiBe->AddElement(elF, fractionmass=72*perCent);
   //
   
 }
-
 void DetectorConstruction::ConstructSDandField()
 {
   G4SDManager* sdMan = G4SDManager::GetSDMpointer();
   auto tritSD = new TritiumSD("TritiumSD");
   sdMan->AddNewDetector(tritSD);
-  fScoringVolume->SetSensitiveDetector(tritSD);
+  if (fScoringVolume) {
+      fScoringVolume->SetSensitiveDetector(tritSD);
+  } else {
+      G4Exception("DetectorConstruction::ConstructSDandField()",
+                  "NoVolume", JustWarning,
+                  "fScoringVolume is null, cannot assign sensitive detector.");
+  }
 }
-
 //....oooOO0OOooo........oooOO0OOooo........oooOO0OOooo........oooOO0OOooo......
 
 }  // namespace B1
