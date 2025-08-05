@@ -19,6 +19,11 @@ public:
     void SetPDG(G4int pdg)              { fPDG = pdg; }
     void SetKinEnergy(G4double energy)  { fKinEnergy = energy; }
     void AddEdep(G4double edep)         { fEdep += edep; }
+    void SetSourceEnergy(G4double E) { fSourceEnergy = E; }
+    G4double GetSourceEnergy() const { return fSourceEnergy; }
+    void SetTotalDeposit(G4double edep) { fTotalDeposit = edep; }
+    G4double GetTotalDeposit() const { return fTotalDeposit; }
+
 
     G4int GetTrackID()      const { return fTrackID; }
     G4int GetEventID()      const { return fEventID; }
@@ -33,6 +38,8 @@ private:
     G4int fPDG = 0;
     G4double fKinEnergy = 0.;
     G4double fEdep = 0.;
+    G4double fSourceEnergy = 0.0;  // Add this line
+    G4double fTotalDeposit = 0.0;
 };
 
 #endif // TRITIUMHIT_H

@@ -21,3 +21,11 @@ void* TritiumHit::operator new(size_t) {
 void TritiumHit::operator delete(void* hit) {
     TritiumHitAllocator->FreeSingle((TritiumHit*) hit);
 }
+/*
+void TritiumHit::SetTotalDeposit(G4double edep) {
+    fTotalDeposit = edep;
+}
+
+G4double TritiumHit::GetTotalDeposit() const {
+    return fTotalDeposit;
+}*/

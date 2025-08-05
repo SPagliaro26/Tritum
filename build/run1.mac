@@ -21,4 +21,4 @@
 /gps/ene/type Gauss
 /gps/ene/mono 14.1 MeV
 /gps/ene/sigma 0.5 MeV
-#/run/beamOn 100
+/run/beamOn 10000

@@ -27,6 +27,7 @@
 /tracking/storeTrajectory 1
 /vis/scene/add/hits
 /vis/scene/notifyHandlers
+/vis/viewer/set/background white
 /vis/scene/endOfEventAction accumulate
 /vis/scene/add/scale
 /vis/scene/notifyHandlers
@@ -71,6 +72,4 @@
 /gps/ene/type Gauss
 /gps/ene/mono 14.1 MeV
 /gps/ene/sigma 0.5 MeV
-/run/beamOn 100
-/analysis/h1/getVector
-/analysis/h2/getVector
+/run/beamOn 10000

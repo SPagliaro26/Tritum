@@ -78,9 +78,11 @@ void EventAction::EndOfEventAction(const G4Event* event)
         auto* hit = (*hits)[i];
 
         analysisManager->FillNtupleDColumn(0, hit->GetPDG());
-        analysisManager->FillNtupleDColumn(1, hit->GetEdep());
-        analysisManager->FillNtupleDColumn(2, hit->GetKinEnergy());
+        analysisManager->FillNtupleDColumn(1, hit->GetTotalDeposit());
+        analysisManager->FillNtupleDColumn(2, hit->GetSourceEnergy());
         analysisManager->FillNtupleDColumn(3, eventID);
+        analysisManager->FillNtupleDColumn(4, hit->GetKinEnergy());
+
         analysisManager->AddNtupleRow();
     }
 }

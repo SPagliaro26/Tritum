@@ -31,7 +31,7 @@
 #define B1PrimaryGeneratorAction_h 1
 
 #include "G4VUserPrimaryGeneratorAction.hh"
-
+#include "G4GeneralParticleSource.hh"
 class G4GeneralParticleSource;
 class G4Event;
 class G4Box;

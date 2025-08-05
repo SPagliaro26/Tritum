@@ -21,6 +21,7 @@ public:
   virtual void EndOfEvent(G4HCofThisEvent* hce) override;
 
 private:
+  std::map<G4int, G4double> fEnergyDepositPerTrack;
   TritiumHitsCollection* fHitsCollection;
   G4int                  collID;
   std::set<G4int>        tritIDs;  // tiene univoci i trackID dei tritoni :contentReference[oaicite:1]{index=1}

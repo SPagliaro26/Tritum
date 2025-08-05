@@ -63,6 +63,7 @@ RunAction::RunAction() : G4UserRunAction()
   analysisManager->CreateNtupleDColumn("EabsTOT");// 02
   analysisManager->CreateNtupleDColumn("SourceEN");// 03
   analysisManager->CreateNtupleDColumn("EventID");// 04
+  analysisManager->CreateNtupleDColumn("KinEnergy");  // 05
   analysisManager->FinishNtuple();
 
 
@@ -155,10 +156,6 @@ if (generatorAction) {
     G4cout << G4endl << "--------------------End of Local Run------------------------";
   }
 
-  G4cout << G4endl << " The run consists of " << nofEvents << " " << runCondition << G4endl
-         << " Cumulated dose per run, in scoring volume : " << G4BestUnit(dose, "Dose")
-         << " rms = " << G4BestUnit(rmsDose, "Dose") << G4endl
-         << "------------------------------------------------------------" << G4endl << G4endl;
 
   analysisManager->Write();
   analysisManager->CloseFile();
