@@ -6,7 +6,7 @@ int TritonAnalysis()
 
 
   // Create a TFile to read the output data
-  TFile* inputFile = TFile::Open("RootFiles/Tritium10000.root", "READ");
+  TFile* inputFile = TFile::Open("RootFiles/Tritium710000.root", "READ");
   if (!inputFile || inputFile->IsZombie()) {
     std::cerr << "Error opening file!" << std::endl;
     return -1;
@@ -26,7 +26,7 @@ int TritonAnalysis()
   tree->SetBranchAddress("SourceEN", &SourceEnergy);
 
 auto* hEabsTot = new TH1D("hEabsTOT", "Total Absorbed Energy", 1000, 0, 6); // Adjust binning as needed
-auto* hSourceEnergy = new TH1D("hSourceEnergy", "Source Energy Distribution", 1000, 0, 20); // Adjust binning as needed
+auto* hSourceEnergy = new TH1D("hSourceEnergy", "Source Energy Distribution", 600, 0, 20); // Adjust binning as needed
   
   // Loop over entries in the tree and perform analysis
   Long64_t nEntries = tree->GetEntries();
@@ -47,14 +47,20 @@ auto* hSourceEnergy = new TH1D("hSourceEnergy", "Source Energy Distribution", 10
     // Create a canvas to draw the histograms
     TCanvas* canvas = new TCanvas("canvas", "Tritium Analysis", 800, 600);
     hEabsTot->SetLineColor(kBlue);
+    hEabsTot->GetXaxis()->SetTitle("Energy Deposit (MeV)");
+    hEabsTot->GetYaxis()->SetTitle("Counts");
+    hEabsTot->SetTitle("Total Absorbed Energy Distribution");
     hEabsTot->Draw();
 
     TCanvas* canvas2 = new TCanvas("canvas2", "Source Energy Distribution", 800, 600);
     hSourceEnergy->SetLineColor(kRed);
+    hSourceEnergy->GetXaxis()->SetTitle("Source Energy (MeV)");
+    hSourceEnergy->GetYaxis()->SetTitle("Counts");
+    hSourceEnergy->SetTitle("Source Energy Distribution");    
     hSourceEnergy->Draw();
 
 
-
+    // Save the histograms to a file
 
 
   return 0;

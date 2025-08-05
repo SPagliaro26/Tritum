@@ -141,8 +141,8 @@ G4Isotope* Li7 = new G4Isotope(
 );
 
 G4Element* Li = new G4Element (name="Lithium" , symbol = "Li",ncomponents = 2);
-Li->AddIsotope (Li6 , fractionmass=10*perCent);
-Li->AddIsotope (Li7 , fractionmass=90*perCent);
+Li->AddIsotope (Li6 , fractionmass=90*perCent);
+Li->AddIsotope (Li7 , fractionmass=10*perCent);
 
 a = 9.01*g/mole;
 G4Element* elBe  = new G4Element(name="Berillium"  ,symbol="Be" , z= 4., a);
